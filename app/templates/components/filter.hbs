@@ -1,0 +1,41 @@
+<h3>Filter By Country: <select {{action "send"}} id="country">
+<option value="None">None</option>
+{{#each list as |person|}}
+<option value="{{person.country}}">{{person.country}}</option>
+{{/each}}
+</select>
+</h3>
+<table border="1" id="table">
+<tr>
+<th>Name</th>
+<th>Phone Number</th>
+<th>Country</th>
+</tr>
+<tbody>
+{{#each list as |contacts|}}
+<tr class="tr"  {{action 'getDetails'}}>
+  <td>  {{contacts.fname}}</td>
+        <td> {{contacts.phone}}</td>
+        <td> {{contacts.country}}</td>
+          </tr>
+{{/each}}
+</tbody>
+</table>
+
+<table border="1" style="visibility : hidden" id="table1">
+<tr>
+<th>Name</th>
+<th>Phone Number</th>
+<th>Country</th>
+</tr>
+<tbody>
+{{#each List as |contacts|}}
+<tr class="tr"  {{action 'getDetail'}}>
+  <td>  {{contacts.fname}}</td>
+        <td> {{contacts.phone}}</td>
+        <td> {{contacts.country}}</td>
+          </tr>
+{{/each}}
+</tbody>
+</table>
+{{outlet}}

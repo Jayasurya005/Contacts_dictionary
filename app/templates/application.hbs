@@ -1,5 +1,22 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="main">
+  <div class="menu">
+           <em class="title">Contacts Dictionary</em>
+  	   <div class="links">
+  		  {{#link-to "register"}}
+ 		     <h1>
+        			<em>New Contact</em>
+      			</h1>
+  		{{/link-to}}
+  		{{#link-to "contacts"}}
+      			<h1>
+        			<em>Contacts_List</em>
+      			</h1>
+  		{{/link-to}}
+    		</div>
+    	</div>
+    <div class="container"> 
+	    <div class="body">
+	    {{outlet}}
+  		</div>
+  	</div>
+  </div>

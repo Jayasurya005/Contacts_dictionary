@@ -1,0 +1,7 @@
+{{#each this.model as |contacts|}}
+<tr {{action 'getDetails' this}}>
+  <td>  {{contacts.fname}}</td>
+        <td> {{contacts.phone}}</td>
+        
+  </tr>
+{{/each}}
